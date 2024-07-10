@@ -1,4 +1,4 @@
-# Pneumonia Chest X-ray Classification
+# Pneumonia Chest X-ray Classification [(Collab Link)](https://colab.research.google.com/drive/1TqQegFXJHg4EBemBEaI0B4DTHbvuualH?usp=sharing)
 
 ## Introduction
 * **Convolutional Neural Network (CNN)** model developed in PyTorch to perform **binary classification** on X-ray jpeg images from [this Kaggle Pneumonia Dataset](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia).
