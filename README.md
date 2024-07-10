@@ -1,7 +1,7 @@
 # Pneumonia Chest X-ray Classification
 
 ## Introduction
-* **Convolutional Neural Network (CNN)** model developed in PyTorch to classify X-ray jpeg images from [Pneumonia Dataset](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia).
+* **Convolutional Neural Network (CNN)** model developed in PyTorch to perform **binary classification** on X-ray jpeg images from [this Kaggle Pneumonia Dataset](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia).
 * After opening the notebook in Collab, please go to `File>Save as copy in Google Drive` to experiment with the code after reading the **Data Handing** section below.
 * **Saved Models** (CNN_v1_03, CNN_v2, CNN_v3_02) and their **Train and Test history** (Train Test History.zip) can be downloaded and uploaded to Google Drive for personal usage.
 
@@ -10,16 +10,16 @@
 ## Features
 ### Data Handling 
 * Code requires **.zip file** containing the **Pneumonia Dataset** to be uploaded to **Google Drive** linked to collab notebook.
-* .zip file is automatically extracted to `drive\My Drive\ML Data Sets`along with removal of any corrupted images.
-* Train, test and validation sets in form of `torch.datasets` is pefromed.
+* .zip file is automatically extracted to `drive\My Drive\ML Data Sets` while removing any corrupted images.
+* Train, test and validation set as `torch.datasets` are created.
 * Train, test and validation data loaders are created.
-* Model and test and train history can be saved to Google Drive. 
-* Saved `model state_dict` and train and test history can be loaded to "resume progress"
+* Model test and train history can be saved to Google Drive. 
+* Saved `model state_dict` and train and test history can be loaded to "resume progress."
 
 ### CNN Model
-* The CNN model is inpired from the [TinyVGG]("https://poloclub.github.io/cnn-explainer/") model architechture.
-* Techniques such as **Learning Rate Scheduling, RAdam warmup**, hyperparameter tuning used to enchance model performance.
-* **Regularization** in form of Dropout layers is present to avoid overfitting.
+* The [TinyVGG](https://poloclub.github.io/cnn-explainer/) model architecture inspires the CNN model model.
+* Techniques such as **Learning Rate Scheduling, RAdam warmup**, and hyperparameter tuning are used to enhance model performance.
+* **Regularization** in the form of Dropout layers is present to avoid overfitting.
 * **Image augmentation** performed using `torchvision.transforms.v2`.
 * Custom training, testing and **Early Stopping + Checkpointing** features.
 
@@ -28,7 +28,7 @@
 ## Evaluation Criteria
 * Model evaluated on the following metrics:
   * Test loss, Test Accuracy | Test and Train history plotted
-  * Confution matrix | Sensitivity and Specificity
+  * Confusion matrix | Sensitivity and Specificity
   * AUROC
 
 ### Results
@@ -54,18 +54,18 @@
 
 ## Conclusion
 * Loading, Saving and Resuming progress features developed for a model saved in .pth format.
-* Through thorough testing certain image augmentations were determined "best suited" for the dataset:
+* Through thorough testing, certain image augmentations were determined "best suited" for the dataset:
   * RandomHorizontalFlip
   * RandomRotation
-  * Normalizaton (Better and faster convergence)
+  * Normalization (Better and faster convergence)
 * Usage of Adam optimiser from 1st epoch was seen disadvantageous.
   * Adam requires a "warmup" phase
   * RAdam used to solve this problem
   * Leading to better convergence
 * Input resolutions:
-  * 512 x 512 - No noticable advantage
+  * 512 x 512 - No noticeable advantage
   * 256 x 256 - Significant decrease in training time | Marginally better performance, wrt to 512 x 512
-  * 128 x 128 - No noticable advantage over 256 x 256
+  * 128 x 128 - No noticeable advantage over 256 x 256
   * **Following results are in a scenario ( < 15 epochs ) where early stopping was initiated due to no improvement in test loss for 5 epochs or more, 128 x 128 might have a noticable reduction in training time for higher number of epochs**.
 
 ---
