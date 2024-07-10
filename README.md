@@ -3,6 +3,7 @@
 ## Introduction
 * **Convolutional Neural Network (CNN)** model developed in PyTorch to classify X-ray jpeg images from [Pneumonia Dataset](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia).
 * After opening the notebook in Collab, please go to `File>Save as copy in Google Drive` to experiment with the code after reading the **Data Handing** section below.
+* **Saved Models** (CNN_v1_03, CNN_v2, CNN_v3_02) and their **Train and Test history** (Train Test History.zip) can be downloaded and uploaded to Google Drive for personal usage.
 
 ---
 
@@ -12,7 +13,7 @@
 * .zip file is automatically extracted to `drive\My Drive\ML Data Sets`along with removal of any corrupted images.
 * Train, test and validation sets in form of `torch.datasets` is pefromed.
 * Train, test and validation data loaders are created.
-* Model and test and train history can be saved to Google Drive.
+* Model and test and train history can be saved to Google Drive. 
 * Saved `model state_dict` and train and test history can be loaded to "resume progress"
 
 ### CNN Model
@@ -30,7 +31,7 @@
   * Confution matrix | Sensitivity and Specificity
   * AUROC
 
-## Results
+### Results
 #### CNN_v1 ( file: `CNN_v1_03.pth` )
 * 512 x 512 input resolution of X-ray images
 * Total Training Time: **~1hr 45mins** for **11 epochs** (T4 GPU: Google Collab)
@@ -45,6 +46,9 @@
 * 128 x 128 input resolution of X-ray images
 * Total Training Time: **~1hr** for **13 epochs** (T4 GPU: Google Collab)
   ![image](https://github.com/nirvan840/Pneumonia-Chest-X-ray-Classification/assets/56934010/e5ff1b7f-0715-4d75-bfba-e84fb06c3003)
+
+### Best Performance
+* CNN_v2 has best overall performance & training time 
 
 ---
 
