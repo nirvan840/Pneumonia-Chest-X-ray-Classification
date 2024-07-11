@@ -48,7 +48,9 @@
   ![image](https://github.com/nirvan840/Pneumonia-Chest-X-ray-Classification/assets/56934010/e5ff1b7f-0715-4d75-bfba-e84fb06c3003)
 
 ### Best Performance
-* CNN_v2 has best overall performance & training time 
+* CNN_v2 has best overall performance & training time
+  * Training time:  ~1hr 20mins ( T4 GPU Google Collab )
+  * Test accuracy: 88.12% ( 600+ test X-rays ) | Sensitivity: 92.05% | AUROC: 0.947
 
 ---
 
