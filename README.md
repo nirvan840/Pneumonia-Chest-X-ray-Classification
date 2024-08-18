@@ -52,7 +52,7 @@
   * Training time:  ~1hr 20mins ( T4 GPU Google Collab )
   * Test accuracy: 88.12% ( 600+ test X-rays ) | Sensitivity: 92.05% | AUROC: 0.947
 
----
+----
 
 ## Conclusion
 * Loading, Saving and Resuming progress features developed for a model saved in .pth format.
