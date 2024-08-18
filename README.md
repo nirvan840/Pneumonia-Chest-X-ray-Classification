@@ -17,7 +17,7 @@
 * Saved `model state_dict` and train and test history can be loaded to "resume progress."
 
 ### CNN Model
-* The [TinyVGG](https://poloclub.github.io/cnn-explainer/) model architecture inspires the CNN model model.
+* The [TinyVGG](https://poloclub.github.io/cnn-explainer/) model architecture inspires the CNN model.
 * Techniques such as **Learning Rate Scheduling, RAdam warmup**, and hyperparameter tuning are used to enhance model performance.
 * **Regularization** in the form of Dropout layers is present to avoid overfitting.
 * **Image augmentation** performed using `torchvision.transforms.v2`.
